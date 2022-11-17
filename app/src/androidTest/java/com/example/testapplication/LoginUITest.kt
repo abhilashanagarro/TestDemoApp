@@ -18,18 +18,18 @@ import org.junit.runner.RunWith
 
 
 @RunWith(AndroidJUnit4::class)
-class LoginUITest{
+class LoginUITest {
     @JvmField
     @Rule
-    var mActivityRule:ActivityTestRule<LoginActivity> = ActivityTestRule(LoginActivity::class.java)
+    var mActivityRule: ActivityTestRule<LoginActivity> = ActivityTestRule(LoginActivity::class.java)
 
     //add a monitor for second activity
     var monitor: Instrumentation.ActivityMonitor = getInstrumentation()
         .addMonitor(HomeActivity::class.java.name, null, false)
 
+
     @Test
-    fun test_Login_HasPasswordOfLessThan8Letters()
-    {
+    fun launchHomeActivity() {
         onView(withId(R.id.edt_username))
             .perform(typeText("abhi@gmail.com"))
 
@@ -38,33 +38,10 @@ class LoginUITest{
 
         onView(withId(R.id.btn_login))
             .perform(click())
-
-        
-
-//        onView(withId(R.id.tv_username))
-//            .check(matches(isDisplayed()))
-
-      //  onView(withText("Email: abhi@gmail.com")).check(matches(isDisplayed()));
-
-//        onView(withId(R.id.tv_username))
-//            .check(matches(withText("Email: abhi@gmail.com")))
-    }
-
-    @Test
-    fun launchHomeActivity()
-    {
-        onView(withId(R.id.edt_username))
-            .perform(typeText("abhi@gmail.com"))
-
-        onView(withId(R.id.edt_password))
-            .perform(typeText("Abhi@1234"))
-
-        onView(withId(R.id.btn_login))
-            .perform(click())
-//wait for 5 seconds
         //wait for 5 seconds
+
         val secondActivity = getInstrumentation()
-            .waitForMonitorWithTimeout(monitor, 5000)
+            .waitForMonitorWithTimeout(monitor, 10000)
         assertNotNull(secondActivity)
     }
 
