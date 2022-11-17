@@ -13,7 +13,6 @@ class EmailValidatorTest {
 
     @Test
     fun emailValidator_CorrectEmailSubDomain_ReturnsTrue() {
-        //assertTrue(AppUtils.isEmailValid("name@email.co.uk"))
         assertFalse(AppUtils.isEmailValid("name@email.co.uk"))
     }
 

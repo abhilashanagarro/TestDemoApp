@@ -38,7 +38,7 @@ class LoginUITest {
 
         onView(withId(R.id.btn_login))
             .perform(click())
-        //wait for 5 seconds
+        //wait for 1 seconds
 
         val secondActivity = getInstrumentation()
             .waitForMonitorWithTimeout(monitor, 10000)

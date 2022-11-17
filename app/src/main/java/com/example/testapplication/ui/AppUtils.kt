@@ -48,28 +48,27 @@ class AppUtils {
         {
             val p: Pattern = Pattern.compile(Constants.EMAIL_REGEX)
 
-            // If the password is empty
+            // If the email is empty
             // return false
 
-            // If the password is empty
+            // If the email is empty
             // return false
             if (email== null) {
                 return false
             }
 
-            // Pattern class contains matcher() method
-            // to find matching between given password
-            // and regular expression.
+            else if(email.length>20 || email.length<7)
+            {
+                return false
+            }
 
             // Pattern class contains matcher() method
-            // to find matching between given password
+            // to find matching between given email
             // and regular expression.
             val m: Matcher = p.matcher(email)
 
-            // Return if the password
-            // matched the ReGex
 
-            // Return if the password
+            // Return if the email
             // matched the ReGex
             return m.matches()
 
