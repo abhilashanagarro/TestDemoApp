@@ -6,23 +6,12 @@
         <type value="RUNNING_DEVICE_TARGET" />
         <deviceKey>
           <Key>
-            <type value="VIRTUAL_DEVICE_PATH" />
-            <value value="C:\Users\abhilashachauhan\.android\avd\DummyDevice.avd" />
+            <type value="SERIAL_NUMBER" />
+            <value value="6d1699d2" />
           </Key>
         </deviceKey>
       </Target>
     </runningDeviceTargetSelectedWithDropDown>
-    <targetSelectedWithDropDown>
-      <Target>
-        <type value="QUICK_BOOT_TARGET" />
-        <deviceKey>
-          <Key>
-            <type value="VIRTUAL_DEVICE_PATH" />
-            <value value="C:\Users\abhilashachauhan\.android\avd\DummyDevice.avd" />
-          </Key>
-        </deviceKey>
-      </Target>
-    </targetSelectedWithDropDown>
-    <timeTargetWasSelectedWithDropDown value="2022-11-17T15:09:08.012431800Z" />
+    <timeTargetWasSelectedWithDropDown value="2022-11-17T15:33:04.464178900Z" />
   </component>
 </project>
